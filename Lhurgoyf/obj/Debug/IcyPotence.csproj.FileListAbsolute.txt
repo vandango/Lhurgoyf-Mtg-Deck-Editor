@@ -1,0 +1,6 @@
+D:\Development\C#\IcyPotence\IcyPotence\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\C#\IcyPotence\IcyPotence\bin\Debug\Toenda.IcyPotence.dll
+D:\Development\C#\IcyPotence\IcyPotence\bin\Debug\Toenda.IcyPotence.pdb
+D:\Development\C#\IcyPotence\IcyPotence\bin\Debug\Toenda.Foundation.dll
+D:\Development\C#\IcyPotence\IcyPotence\obj\Debug\Toenda.IcyPotence.dll
+D:\Development\C#\IcyPotence\IcyPotence\obj\Debug\Toenda.IcyPotence.pdb

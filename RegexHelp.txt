@@ -1,0 +1,186 @@
+
+// tutor
+
+([A-Za-z])*.(Then shuffle your library){1,}.
+
+
+([A-Za-z0-9]).*?
+
+
+
+.(Search your library for a card){1,}.*?([A-Za-z0-9]).*?(Then shuffle your library){1,}.
+
+(Search your library for a card){1,}.*?([A-Za-z0-9]).*?(Then shuffle your library){1,}
+
+(Search your library for a){1,}.*?([A-Za-z0-9]).*?(Then shuffle your library){1,}
+
+(Search your library for a){1,}.*?(card).*?([A-Za-z0-9]).*?(Then shuffle your library){1,}
+
+
+
+Transmute {1}{B}{B} ({1}{B}{B}, Discard this card: Search your library for a card with the same converted mana cost as this card, reveal it, and put it into your hand. Then shuffle your library. Transmute only as a sorcery.)
+
+
+// counter
+
+
+(Counter target){1,}.*?([A-Za-z0-9]).*?(spell)*.*?(ability)*
+
+(Counter target){1,}.*?([A-Za-z0-9]).*?(spell|ability)*
+
+(Counter target){1,}.*?(spell)|(ability)*
+
+(Counter target){1,}.*?((spell)|(ability))
+
+(Counter target){1,}.*?(spell|ability)
+
+
+Counter target instant or sorcery spell.
+
+Transmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same converted mana cost as this card, reveal it, and put it into your hand. Then shuffle your library. Transmute only as a sorcery.)
+
+You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.
+
+Counter target spell.
+
+Counter target activated ability. (Mana abilities can't be targeted.)
+
+Draw a card.
+
+Counter target activated or triggered ability. (Mana abilities can't be targeted.)
+
+
+
+// removal: exile
+
+(exile){1,}.*?(target).*?(creature|permanent)
+
+
+When Oblivion Ring enters the battlefield, exile another target nonland permanent.
+
+When Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner's control.
+
+
+Exile target creature. Its controller may search his or her library for a basic land card, put that card onto the battlefield tapped, then shuffle his or her library.
+
+
+
+// removal: sacrifice
+
+
+(player sacrifices a){1,}.*?(creature|permanent)
+
+
+Target player sacrifices a creature. You gain life equal to that creature's toughness.
+
+Rebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)
+
+
+Target player sacrifices a creature.
+
+
+Target player sacrifices an attacking creature.
+
+Metalcraft — That player sacrifices two attacking creatures instead if you control three or more artifacts.
+
+
+Each player sacrifices all colored permanents he or she controls.
+
+
+
+// removal: destroy
+
+
+(Destroy){1,}.*?(creature|permanent)
+
+
+
+
+Destroy target permanent.
+
+
+Destroy target nonartifact, nonblack creature. It can't be regenerated.
+
+
+Destroy all creatures. They can't be regenerated.
+
+Destroy target nonartifact creature.
+
+
+Destroy all creatures. They can't be regenerated.
+
+
+
+// removal: reduce
+
+(creature)?.*?(-[0-9]/-[0-9]).*?(counter)?.*?(creature)?
+
+(-[0-9]/-[0-9])*(creature)?
+
+(creature)?.*?(-[0-9]/-[0-9])*(creature)?
+
+-> (creature)+.*?(-[0-9]/-[0-9])+
+-> (-[0-9]/-[0-9])+.*?(creature)+
+
+(creature)?.*?(-[0-9]/-[0-9]){1,}.*?(creature)?
+(creature)*.*?(-[0-9]/-[0-9]){1,}.*?(creature)*
+(?:(creature)?).*?(-[0-9]/-[0-9])+.*?(?:(creature)?)
+(?:(creature)*).*?(-[0-9]/-[0-9])+.*?(?:(creature)*)
+
+
+# (-[0-9]/-[0-9]){1,}.*?(counter).*?(creature)?.*?(library)?
+# (creature)*.*?(-[0-9]/-[0-9]){1,}.*?(creature)*
+
+
+
+Target creature gets -2/-2 until end of turn.
+
+
+Put X -1/-1 counters on each creature. Shuffle Black Sun's Zenith into its owner's library.
+
+
+
+// removal: bounce
+
+(Return){1,}.*?(creature|permanent)
+
+
+
+
+Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)
+
+Return target nonland permanent to its owner's hand. If Into the Roil was kicked, draw a card.
+
+
+Return target nonland permanent with converted mana cost X to its owner's hand.
+
+Draw a card.
+
+
+Return target creature to its owner's hand.
+
+
+Return target permanent to its owner's hand.
+
+
+Return all permanents to their owners' hands.
+
+
+
+// removal: damage
+
+(deals)+.*?([0-9x])+.*?(damage)+.*?(creature)+
+
+
+
+
+Lightning Bolt deals 3 damage to target creature or player.
+
+Arc Trail deals 2 damage to target creature or player and 1 damage to another target creature or player.
+
+
+Starstorm deals X damage to each creature.
+
+Cycling {3} ({3}, Discard this card: Draw a card.)
+
+
